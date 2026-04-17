@@ -16,11 +16,6 @@ abstract class AudiopcInterface {
   Stream<int> get positionStream;
 
   /// Sets a local file path as the active source.
-
-  final StreamController<int> positionStreamController =
-      StreamController<int>.broadcast();
-
-  /// Sets a local file path as the active source.
   bool setFileSource(String path);
 
   /// Sets a direct URL as the active source.
