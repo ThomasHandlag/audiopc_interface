@@ -70,8 +70,15 @@ abstract class AudiopcInterface {
   MetaData getMetadata(String url);
 
   /// Retrieves the thumbnail image data from the native backend.
-  /// Returns a byte array representing the image, or an empty array if no thumbnail is available.
-  Uint8List? getThumbnail(String url);
+  /// Returns a byte array representing the image, 
+  /// or an empty array if no thumbnail is available.
+  /// 
+  /// The `url` parameter specifies the source URL for which to retrieve the thumbnail.
+  /// 
+  /// The `maxSize` parameter specifies the maximum image in bytes to return, 
+  /// allowing for efficient retrieval of thumbnails without overwhelming memory.
+  /// Default `maxSize` is set to 20 MB.
+  Uint8List? getThumbnail(String url, {int maxSize = 20 * 1024 * 1024});
 
   /// Stops playback and releases timers and stream controllers.
   void dispose();
