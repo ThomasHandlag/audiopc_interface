@@ -1,6 +1,6 @@
 name: audiopc_interface
 description: "A Flutter package for the Audiopc interface, providing a user-friendly interface for controlling and monitoring Audiopc devices."
-version: 0.0.1+1
+version: 0.0.1+2
 homepage: https://app.bustify.dev
 repository: https://github.com/thomashandlg/audiopc_interface
 
