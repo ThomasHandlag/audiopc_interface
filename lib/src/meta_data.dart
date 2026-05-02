@@ -59,8 +59,8 @@ class MetaData {
 }
 
 /*
-/// Sample metatdata output from symphonia
-[log] Metadata JSON: 
+Sample metatdata output from symphonia
+
 {
   "channels":"2",
   "frame_count":"9416448",
