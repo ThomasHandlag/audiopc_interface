@@ -3,16 +3,13 @@ import 'dart:typed_data';
 
 import 'package:audiopc_interface/src/backend_info.dart';
 import 'package:audiopc_interface/src/meta_data.dart';
+import 'package:audiopc_interface/src/state.dart';
 
 /// Defines the common interface for both native and web implementations of the audio player.
-abstract class AudiopcInterface {
+abstract class AudiopcInterface with PlayerStateMixin {
   /// Retrieves information about the audio backend, including the default output sample rate,
   /// number of channels, and available output devices.
   AudioBackendInfo getAudioBackendInfo();
-
-  /// Emits playback position updates in milliseconds.
-  /// The stream emits updates at a regular interval while audio is playing, and may emit 0 when idle.
-  Stream<int> get positionStream;
 
   /// Sets a local file path as the active source.
   bool setFileSource(String path);
